@@ -1,1 +1,2 @@
-@@import "./components/index.css";
+@import "./components/variables/index.css";
+@import "./components/index.css";
