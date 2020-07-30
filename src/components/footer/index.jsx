@@ -39,14 +39,13 @@ export const Footer = () => {
           <p> hello from footer</p>
           <p> hello from footer</p>
         </div>
-
       </div>
       <div className="footer-child-1">
-      <h4>
-        Get it on your mobile phone from <h2>Play Store</h2> or <h2>App Store</h2>
-      </h4>
+        <div>
+          Get it on your mobile phone from <h2>Play Store</h2> or{" "}
+          <h2>App Store</h2>
+        </div>
       </div>
-        
     </div>
   );
 };

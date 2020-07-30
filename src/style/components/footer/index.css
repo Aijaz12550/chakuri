@@ -1,17 +1,17 @@
-.footer-container{
-    background-color: var(--bg-color);
-    color: var(--color);
-    min-height: 300px;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: space-around;
+.footer-container {
+  background-color: var(--bg-color);
+  color: var(--color);
+  min-height: 300px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
 }
 
-.footer-child-1{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
+.footer-child-1 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
-.footer-child-1 h4 h2 {
-    display: inline;
+.footer-child-1 div h2 {
+  display: inline;
 }
