@@ -1,6 +1,6 @@
 import React from 'react'
 
-const UserProfile = () => {
+export const UserProfile = () => {
     return(
         <>
         Hello from User Profile
