@@ -18,7 +18,7 @@ exports.loginQuery = `
 // signup ***
 exports.signupType = `
   type signupType {
-    message : String
+    token : String
   }
 `;
 exports.signupInput = `
@@ -29,5 +29,5 @@ exports.signupInput = `
   }
 `;
 exports.signupMutation = `
-  signup(input: signupInput): signupType
+  signup(name: String! email: String! password: String!): signupType
 `;

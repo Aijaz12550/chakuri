@@ -8,11 +8,11 @@ import { ApolloProvider } from '@apollo/client';
 import gqlClient from './GraphQL/Config'
 
 ReactDOM.render(
-  <React.StrictMode>
+
     <ApolloProvider client={gqlClient}>
     <App />
   </ApolloProvider>
-  </React.StrictMode>,
+  ,
   document.getElementById('root')
 );
 

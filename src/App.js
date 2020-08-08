@@ -2,7 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Header, Footer, Signin, Register } from "./components";
 import { LoginQuery } from "./GraphQL/Queries/login";
-import { useQuery } from "@apollo/client";
+import { signupMutation } from "./GraphQL/Queries/signup";
+import { useQuery, useMutation } from "@apollo/client";
 import { Provider } from "react-redux";
 import { Playground, store } from "graphql-playground-react";
 
@@ -10,10 +11,11 @@ const Navigation = () => {
   let { loading, error, data } = useQuery(LoginQuery, {
     variables: { email: "23434", password: "3454" },
   });
+  let data2 = { name: "aijaz", email: "a@gmail.com", password: "12345asd" };
+
   console.log("loading", loading);
   console.log("error", error);
   console.log("data", data);
-
   return (
     <Router>
       <Header />

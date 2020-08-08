@@ -12,6 +12,10 @@ app.use(express.json())
 
 mongodb.connection.once("open",()=>{
   console.log('mongodb connected..')
+}).then(con => {
+  console.log("connected")
+}).catch(error=>{
+  console.log("error",error)
 })
 
 
