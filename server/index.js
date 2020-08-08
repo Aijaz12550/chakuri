@@ -3,10 +3,13 @@ const cors = require("cors")
 const mongodb = require('./Config')
 const { graphqlHTTP } = require('express-graphql');
 const schema = require('./Schema/schema.js')
+const graphQlResolvers = require('./Resolvers')
 
 const app = express()
 app.use(cors())
-app.use(express().parseJson())
+app.use(express.urlencoded({extended:true}))
+app.use(express.json())
+
 mongodb.connection.once("open",()=>{
   console.log('mongodb connected..')
 })
@@ -16,7 +19,7 @@ app.use(
   '/graphql',
   graphqlHTTP({
     schema,
-    // rootValue: graphQlResolvers,
+    rootValue: graphQlResolvers,
     graphiql: true
   })
 );

@@ -1,6 +1,5 @@
 exports.loginType = `
 type loginType {
-  token: String
   email: String
 }
 `;
@@ -13,7 +12,7 @@ input loginInput {
 `;
 
 exports.loginQuery = `
-  loginUser(input: loginInput): loginType
+  loginUser(email: String! password: String!): loginType
 `;
 
 // signup ***
