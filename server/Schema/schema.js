@@ -2,10 +2,11 @@ const { buildSchema } = require("graphql");
 const {
   loginInput,
   loginType,
-  loginQuery,
+  loginMutation,
   signupMutation,
   signupType,
   signupInput,
+  helloQuery
 } = require("./login");
 
 const schema = buildSchema(
@@ -17,10 +18,11 @@ ${loginInput}
 ${signupInput}
 
 type RootQuery {
-  ${loginQuery}
+  ${helloQuery }
 }
 type RootMutation {
   ${signupMutation}
+  ${loginMutation}
 }
 
 schema {

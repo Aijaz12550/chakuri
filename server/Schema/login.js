@@ -1,6 +1,8 @@
 exports.loginType = `
 type loginType {
   email: String
+  token: String
+  userId: String
 }
 `;
 
@@ -11,9 +13,13 @@ input loginInput {
 }
 `;
 
-exports.loginQuery = `
+exports.loginMutation = `
   loginUser(email: String! password: String!): loginType
 `;
+
+exports.helloQuery = `
+ test(test: String): loginType
+`
 
 // signup ***
 exports.signupType = `
