@@ -3,7 +3,7 @@ import { signupMutation } from "../../GraphQL/Queries/signup";
 import { useMutation } from "@apollo/client";
 
 export const Register = memo(() => {
-  const [addTodo, { data }] = useMutation(signupMutation);
+  const [addTodo] = useMutation(signupMutation);
 
   let nameInput = createRef();
   let emailInput = createRef();
