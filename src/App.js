@@ -9,11 +9,11 @@ const Navigation = () => {
   return (
     <Router>
       <Header />
-      <Provider store={store}>
-        <div style={{width:"800px"}}>
-        <Playground endpoint="https://api.graph.cool/simple/v1/swapi" />
-      </div>
-      </Provider>
+//       <Provider store={store}>
+//         <div style={{width:"800px"}}>
+//         <Playground endpoint="https://api.graph.cool/simple/v1/swapi" />
+//       </div>
+//       </Provider>
       <Routes>
         <Route path="/" element={<Signin />} />
         <Route exact path="/register" element={<Register />} />
